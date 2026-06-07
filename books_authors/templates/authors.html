@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <title>Authors</title>
+    <link rel="stylesheet" href="{% static  'css/author.css' %}">
+
+</head>
+<body>
+
+    <nav>
+        <a href="/">Books</a>
+        <a href="/authors">Authors</a>
+    </nav>
+
+    <div class="layout">
+
+        <!-- Add an Author form -->
+        <div class="form-section">
+            <h2>Add an Author</h2>
+            <form action="/authors/create" method="POST">
+                {% csrf_token %}
+                <div class="field">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name">
+                </div>
+                <div class="field">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name">
+                </div>
+                <button type="submit" class="btn">Add</button>
+            </form>
+        </div>
+
+        <!-- All authors table -->
+        <div class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for author in all_authors %}
+                    <tr>
+                        <td>{{ author.id }}</td>
+                        <td>{{ author.first_name }} {{ author.last_name }}</td>
+                        <td><a href="/authors/{{ author.id }}">View</a></td>
+                    </tr>
+                    {% empty %}
+                    <tr><td colspan="3">No authors yet.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>

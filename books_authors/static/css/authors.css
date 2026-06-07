@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+  color: #111;
+}
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+.layout {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+}
+.form-section {
+  min-width: 260px;
+}
+.field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.field label {
+  width: 90px;
+  text-align: right;
+  font-size: 0.9rem;
+}
+.field input {
+  flex: 1;
+  border: 1px solid #aaa;
+  padding: 5px 8px;
+  font-size: 0.9rem;
+}
+.btn {
+  margin-left: 100px;
+  padding: 4px 14px;
+  border: 1px solid #111;
+  background: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #f0f0f0;
+}
+.table-section {
+  flex: 1;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+th {
+  text-align: left;
+  border-bottom: 2px solid #111;
+  padding: 6px 10px;
+}
+td {
+  padding: 6px 10px;
+  border-bottom: 1px solid #ddd;
+}
+tr:nth-child(even) {
+  background: #f7f7f7;
+}
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+nav {
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+nav a {
+  margin-right: 16px;
+}
