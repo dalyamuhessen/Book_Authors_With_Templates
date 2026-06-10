@@ -6,19 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <title>Books</title>
-    <link rel="stylesheet" href="{% static  'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
-
     <nav>
         <a href="/">Books</a>
         <a href="/authors">Authors</a>
     </nav>
-
     <div class="layout">
-
-        <!-- Add a Book form -->
         <div class="form-section">
             <h2>Add a Book</h2>
             <form action="/books/create" method="POST">
@@ -34,8 +30,6 @@
                 <button type="submit" class="btn">Add</button>
             </form>
         </div>
-
-        <!-- All books table -->
         <div class="table-section">
             <table>
                 <thead>

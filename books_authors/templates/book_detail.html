@@ -40,7 +40,6 @@
     <p class="no-authors">No authors assigned yet.</p>
     {% endif %}
 
-    <!-- Add author dropdown (SENSEI BONUS: excludes already-linked authors) -->
     {% if available_authors %}
     <form action="/books/{{ book.id }}/add_author" method="POST">
         {% csrf_token %}
